@@ -3,6 +3,7 @@ import ttk
 
 import os
 
+
 #--Main Windows
 window = Tk()
 window.title("LAZYNESS...")
