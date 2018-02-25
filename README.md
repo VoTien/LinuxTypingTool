@@ -1,3 +1,5 @@
 # LinuxTypingTool
-#Tool check auto type state into CentOS
-#admintools -t db_status -s UP
+#2018 copy right
+#Tool which type automatically command in remote linux
+#Ideal: Auto copy text to clipboard and paste command to remote machine
+#
