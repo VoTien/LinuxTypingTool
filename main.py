@@ -1,6 +1,5 @@
 from Tkinter import *
 import ttk
-import pyautogui
 import os
 import pyautogui
 
