@@ -29,21 +29,21 @@ def start_operation():
 def stop_operation():
   if box.get() == 'DA':
     txtstop ='service dadaemon stop'
-    cmp_clipboard(txtstart)
+    cmp_clipboard(txtstop)
     move_mouse()
   if box.get() == 'DC':
     txtstop ='service dcmd stop'
-    cmp_clipboard(txtstart)
+    cmp_clipboard(txtstop)
     move_mouse()
   testButton.config(text=txtstop)
 def status_operation():
   if box.get() == 'DA':
     txtstatus ='service dadaemon status'
-    cmp_clipboard(txtstart)
+    cmp_clipboard(txtstatus)
     move_mouse()
   if box.get() == 'DC':
     txtstatus ='service dcmd status'
-    cmp_clipboard(txtstart)
+    cmp_clipboard(txtstatus)
     move_mouse()
   if box.get() == 'Vertica':
     txtstatus = 'admintools -t db_status -s UP'
