@@ -19,37 +19,36 @@ testButton.grid(column=0, row=5)
 def start_operation():
   if box.get() == 'DA':
     txtstart ='service dadaemon start'
+    cmp_clipboard(txtstart)
     move_mouse()
   if box.get() == 'DC':
     txtstart ='service dcmd start'
+    cmp_clipboard(txtstart)
     move_mouse()
-  else:
-    testButton.config(text='There nothing OID')
   testButton.config(text=txtstart)
-  cmp_clipboard(txtstart)
 def stop_operation():
   if box.get() == 'DA':
     txtstop ='service dadaemon stop'
+    cmp_clipboard(txtstart)
     move_mouse()
   if box.get() == 'DC':
     txtstop ='service dcmd stop'
+    cmp_clipboard(txtstart)
     move_mouse()
-  else:
-    testButton.config(text='There nothing OID')
   testButton.config(text=txtstop)
-  cmp_clipboard(txtstop)
 def status_operation():
   if box.get() == 'DA':
     txtstatus ='service dadaemon status'
+    cmp_clipboard(txtstart)
     move_mouse()
   if box.get() == 'DC':
     txtstatus ='service dcmd status'
+    cmp_clipboard(txtstart)
     move_mouse()
   if box.get() == 'Vertica':
     txtstatus = 'admintools -t db_status -s UP'
     move_mouse()
   testButton.config(text=txtstatus)
-  cmp_clipboard(txtstatus)
 def cmp_clipboard(txt):
   r.withdraw()
   r.clipboard_clear()
