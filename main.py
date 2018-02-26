@@ -13,7 +13,7 @@ r.withdraw()
 r.clipboard_clear()
 #TESTGLOBAL
 testButton =Label(window,text="")
-testButton.grid(column=0, row=5)
+testButton.grid(column=0, row=6)
 
 #--Functions
 def start_operation():
@@ -63,6 +63,9 @@ def move_mouse():
   pyautogui.moveTo(1000, 500)
   pyautogui.rightClick()
   pyautogui.press('enter')
+def exit_app():
+  global window
+  window.destroy()
 
 #--Labels
 title = Label(window,text="Please select type of Machine")
@@ -84,4 +87,7 @@ buttonStatus.grid(column=0,row=3)
 buttonStop = Button(text="Stop",command=stop_operation)
 buttonStop.grid(column=0,row=4)
 
+#Windows
+buttonExit = Button(text="EXIT PROGRAM",command=exit_app)
+buttonExit.grid(column=0,row=5)
 window.mainloop()
