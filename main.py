@@ -51,6 +51,7 @@ def status_operation():
     move_mouse()
   if box.get() == 'Vertica':
     txtstatus = 'admintools -t db_status -s UP'
+    cmp_clipboard(txtstatus)
     testButton.config(text=txtstatus)
     move_mouse()
 def cmp_clipboard(txt):
