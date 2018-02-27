@@ -60,7 +60,8 @@ def cmp_clipboard(txt):
   r.clipboard_append(txt)
   r.update()
 def move_mouse():
-  pyautogui.moveTo(1000, 500)
+  width, height = pyautogui.size()
+  pyautogui.moveTo(width - 1000, height - 500)
   pyautogui.rightClick()
   pyautogui.press('enter')
 def exit_app():
