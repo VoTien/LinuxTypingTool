@@ -54,6 +54,11 @@ def status_operation():
     cmp_clipboard(txtstatus)
     testButton.config(text=txtstatus)
     move_mouse()
+  if box.get() == 'PC':
+    txtstatus = 'service caperfcenter_eventmanager status && service caperfcenter_devicemanager status && service caperfcenter_sso status && service caperfcenter_console status'
+    cmp_clipboard(txtstatus)
+    testButton.config(text='4 staus PC commands')
+    move_mouse()
 def cmp_clipboard(txt):
   r.withdraw()
   r.clipboard_clear()
@@ -76,7 +81,7 @@ title.grid(column=0,row=0)
 #Combobox
 value = StringVar()
 box = ttk.Combobox(window, textvariable=value, state='readonly')
-box['values'] = ('DC','DA','Vertica')
+box['values'] = ('DC','DA','Vertica','PC')
 box.current(0)
 box.grid(column=0, row=1)
 testButton.config(text=box.get())
